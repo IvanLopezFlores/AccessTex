@@ -1,7 +1,25 @@
-AccessTex - Editor LaTeX accesible
+cessTex - Editor LaTeX accesible
 Versión: 1.0
-Fecha de actualización: junio de 2026
-Autor: José Iván López Flores
+Fecha de actualización: septiembre de 2026
+
+Autores del desarrollo tecnológico:
+José Iván López Flores
+ORCID: https://orcid.org/0000-0003-2350-2647
+
+Carolina Carrillo García
+ORCID: https://orcid.org/0000-0001-7259-4897
+
+Universidad Autónoma de Zacatecas
+
+Contribuciones:
+José Iván López Flores: desarrollo principal y arquitectura del software; implementación,
+diseño de accesibilidad, interacción mediante interfaz y teclado, flujo de compilación
+y desarrollo del sistema de análisis de errores de compilación.
+
+Carolina Carrillo García: coconceptualización de AccessTex; contribución a la metodología
+de localización de errores, metodología de validación, evaluación de accesibilidad
+y diseño de estudios con usuarios.
+
 Licencia: GPLv3
 ============================================================
 INSTRUCCIONES DE USO PARA PERSONAS CON DISCAPACIDAD VISUAL

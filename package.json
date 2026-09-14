@@ -2,14 +2,17 @@
   "name": "accesstex",
   "version": "1.0.0",
   "description": "Editor LaTeX accesible para personas con discapacidad visual",
-  "author": "José Iván López Flores",
+  "author": {
+    "name": "José Iván López Flores",
+    "url": "https://orcid.org/0000-0003-2350-2647"
+  },
   "license": "GPL-3.0-or-later",
   "main": "main.js",
   "scripts": {
-  "start": "cross-env NODE_ENV=development electron .",
-  "prod": "cross-env NODE_ENV=production electron .",
-  "build": "electron-builder"
-},
+    "start": "cross-env NODE_ENV=development electron .",
+    "prod": "cross-env NODE_ENV=production electron .",
+    "build": "electron-builder"
+  },
   "build": {
     "appId": "org.accesstex.app",
     "productName": "AccessTex",
@@ -55,5 +58,11 @@
     "cross-env": "^7.0.3",
     "electron": "^28.3.3",
     "electron-builder": "^24.13.3"
-  }
+  },
+  "contributors": [
+    {
+      "name": "Carolina Carrillo García",
+      "url": "https://orcid.org/0000-0001-7259-4897"
+    }
+  ]
 }
