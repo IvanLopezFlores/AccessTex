@@ -50,10 +50,21 @@ const LOG_LATEX = path.join(COMPILE_DIR, "documento.log");
 
 // ─── Salud y UI ───────────────────────────────────────────────
 app.get("/status", (req, res) => res.send("OK"));
+
+// Archivos de la interfaz de AccessTex
 const publicDir = (process.env.NODE_ENV === "development")
   ? path.join(__dirname, "public")
   : path.join(process.resourcesPath, "public");
+
+// Monaco Editor local
+const monacoDir = (process.env.NODE_ENV === "development")
+  ? path.join(__dirname, "node_modules", "monaco-editor", "min")
+  : path.join(process.resourcesPath, "monaco");
+
+// Servir archivos estáticos
 app.use(express.static(publicDir));
+app.use("/monaco", express.static(monacoDir));
+
 app.get("/", (req, res) => res.sendFile(path.join(publicDir, "index.html")));
 
 // ─── Helpers ──────────────────────────────────────────────────

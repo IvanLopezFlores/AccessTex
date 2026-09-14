@@ -54,6 +54,10 @@ const traducciones = {
       label_descargar: "Descargar",
       label_idioma: "Idioma",
       label_errores: "Errores de compilación",
+      aria_editor: "Editor LaTeX accesible",
+      aria_plantilla: "Seleccionar plantilla",
+      aria_seccion: "Ir a una sección",
+      aria_idioma: "Seleccionar idioma",
 
       titulo_app: "AccessTex",
       boton_compilar: "Compilar (Ctrl + Enter)",
@@ -103,6 +107,10 @@ const traducciones = {
       label_descargar: "Download",
       label_idioma: "Language",
       label_errores: "Compilation errors",
+      aria_editor: "Accessible LaTeX editor",
+      aria_plantilla: "Select template",
+      aria_seccion: "Go to a section",
+      aria_idioma: "Select language",
 
       titulo_app: "AccessTex",
       boton_compilar: "Compile (Ctrl + Enter)",

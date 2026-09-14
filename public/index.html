@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>AccessTex</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.39.0/min/vs/loader.min.js"></script>
+  <script src="/monaco/vs/loader.js"></script>
   <style>
     body {
       font-family: sans-serif;
@@ -142,6 +142,22 @@
   document.getElementById("label_cargar").textContent = t("label_cargar");
   document.getElementById("label_descargar").textContent = t("label_descargar");
   document.getElementById("label_idioma").textContent = t("label_idioma");
+
+    // Idioma del documento para tecnologías de asistencia
+  document.documentElement.lang = idioma;
+
+  // Nombres accesibles dinámicos
+  document.getElementById("monaco-container")
+    .setAttribute("aria-label", t("aria_editor"));
+
+  document.getElementById("plantillaSelect")
+    .setAttribute("aria-label", t("aria_plantilla"));
+
+  document.getElementById("menuEstructura")
+    .setAttribute("aria-label", t("aria_seccion"));
+
+  document.getElementById("idiomaSelect")
+    .setAttribute("aria-label", t("aria_idioma"));
  }
 
     document.getElementById("idiomaSelect").addEventListener("change", e => {
