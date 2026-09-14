@@ -16,11 +16,11 @@ José Iván López Flores: desarrollo principal y arquitectura del software; imp
 diseño de accesibilidad, interacción mediante interfaz y teclado, flujo de compilación
 y desarrollo del sistema de análisis de errores de compilación.
 
-Carolina Carrillo García: coconceptualización de AccessTex; contribución a la metodología
+Carolina Carrillo García: co-conceptualización de AccessTex; contribución a la metodología
 de localización de errores, metodología de validación, evaluación de accesibilidad
 y diseño de estudios con usuarios.
 
-Licencia: GPLv3
+Licencia: GPL-3.0-or-later
 ============================================================
 INSTRUCCIONES DE USO PARA PERSONAS CON DISCAPACIDAD VISUAL
 ============================================================
