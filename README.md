@@ -115,11 +115,19 @@ AccessTex is free software distributed under the **GNU General Public License v3
 
 See the `LICENSE` file for the full license text.
 
-### Author
+### Authors and contributions
 
-**José Iván López Flores**
+**José Iván López Flores**  
+Universidad Autónoma de Zacatecas (UAZ), Mexico.  
+ORCID: https://orcid.org/0000-0003-2350-2647  
+Lead developer and software architect. Contributions include software implementation, accessibility design, interface and keyboard interaction, compilation workflow, and development of the compilation-error analysis system.
 
-Universidad Autónoma de Zacatecas (UAZ), Mexico.
+**Carolina Carrillo García**  
+Universidad Autónoma de Zacatecas (UAZ), Mexico.  
+ORCID: https://orcid.org/0000-0001-7259-4897  
+Co-conceptualization of AccessTex, contribution to the error-localization methodology, validation methodology, accessibility evaluation, and user-study design.
+
+The roles above describe the contributors' actual participation in the technological development. Software authorship does not imply identical participation in source-code implementation.
 
 ### Project status
 
@@ -239,11 +247,19 @@ AccessTex es software libre distribuido bajo la **GNU General Public License ver
 
 Consulta el archivo `LICENSE` para ver el texto completo de la licencia.
 
-### Autor
+### Autores y contribuciones
 
-**José Iván López Flores**
+**José Iván López Flores**  
+Universidad Autónoma de Zacatecas (UAZ), México.  
+ORCID: https://orcid.org/0000-0003-2350-2647  
+Desarrollador principal y arquitecto del software. Sus contribuciones incluyen la implementación del programa, el diseño de accesibilidad, la interacción mediante interfaz y teclado, el flujo de compilación y el desarrollo del sistema de análisis de errores de compilación.
 
-Universidad Autónoma de Zacatecas (UAZ), México.
+**Carolina Carrillo García**  
+Universidad Autónoma de Zacatecas (UAZ), México.  
+ORCID: https://orcid.org/0000-0001-7259-4897  
+Coconceptualización de AccessTex, contribución a la metodología de localización de errores, metodología de validación, evaluación de accesibilidad y diseño de estudios con usuarios.
+
+Los roles anteriores describen la participación efectiva de cada autora y autor en el desarrollo tecnológico. La autoría del software no implica una participación idéntica en la implementación del código fuente.
 
 ### Estado del proyecto
 

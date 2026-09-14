@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use AccessTex in research, teaching, accessibility evaluation, or software development, please cite this software."
+title: "AccessTex"
+type: software
+version: "1.0.0"
+date-released: 2026-09-13
+license: GPL-3.0-or-later
+
+authors:
+  - family-names: "López Flores"
+    given-names: "José Iván"
+    affiliation: "Universidad Autónoma de Zacatecas"
+    orcid: "https://orcid.org/0000-0003-2350-2647"
+  - family-names: "Carrillo García"
+    given-names: "Carolina"
+    affiliation: "Universidad Autónoma de Zacatecas"
+    orcid: "https://orcid.org/0000-0001-7259-4897"
+
+repository-code: "https://github.com/IvanLopezFlores/AccessTex"
+
+abstract: >-
+  AccessTex is an accessible LaTeX editor and compiler designed to support
+  users with visual disabilities, particularly screen-reader users. It
+  provides keyboard-centered interaction, document-structure navigation,
+  accessible compilation feedback, interpretation of common LaTeX errors,
+  and localization of the probable error line.
+
+keywords:
+  - LaTeX
+  - accessibility
+  - visual disability
+  - screen reader
+  - assistive technology
+  - NVDA
+  - accessible software
