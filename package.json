@@ -1,0 +1,59 @@
+{
+  "name": "accesstex",
+  "version": "1.0.0",
+  "description": "Editor LaTeX accesible para personas con discapacidad visual",
+  "author": "José Iván López Flores",
+  "license": "GPL-3.0-or-later",
+  "main": "main.js",
+  "scripts": {
+  "start": "cross-env NODE_ENV=development electron .",
+  "prod": "cross-env NODE_ENV=production electron .",
+  "build": "electron-builder"
+},
+  "build": {
+    "appId": "org.accesstex.app",
+    "productName": "AccessTex",
+    "copyright": "Copyright © 2025 José Iván López Flores",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "server.js",
+      "LICENSE",
+      "INSTRUCCIONES.txt"
+    ],
+    "extraResources": [
+      {
+        "from": "public",
+        "to": "public"
+      },
+      {
+        "from": "plantillas.txt",
+        "to": "plantillas.txt"
+      }
+    ],
+    "asar": false,
+    "win": {
+      "icon": "accesstex.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "AccessTex",
+      "deleteAppDataOnUninstall": true
+    }
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
+  }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AccessTex</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.39.0/min/vs/loader.min.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 1em;
+    }
+    #monaco-container {
+      height: 300px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 1em;
+    }
+    #errores {
+      width: 100%;
+      height: 3em;
+    }
+
+    /* Layout en una sola fila horizontal */
+    .fila-de-controles {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 1em;
+      align-items: flex-start;
+      margin-top: 1em;
+      overflow-x: auto;
+    }
+
+    .fila-de-controles fieldset {
+      min-width: 140px;
+      flex-shrink: 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1em;
+    }
+
+    .fila-de-controles fieldset label {
+      display: block;
+      margin-bottom: 0.5em;
+          }
+
+    .fila-de-controles select,
+    .fila-de-controles button,
+    .fila-de-controles a {
+      margin-top: 0.5em;
+    }
+    .titulo-bloque {
+    margin-bottom: 0.5em;
+  display: block;
+}
+  </style>
+</head>
+<body>
+  <h2>AccessTex</h2>
+
+  <!-- Editor -->
+  <div id="monaco-container" role="textbox" aria-label="Editor LaTeX accesible" tabindex="0"></div>
+
+  <!-- Controles en fila horizontal -->
+  <div class="fila-de-controles">
+
+    <!-- Compilación -->
+<fieldset>
+  <legend id="label_compilacion" class="titulo-bloque"></legend>
+  <button id="compilar" aria-label="Compilar documento LaTeX">Compilar (Ctrl + Enter)</button>
+</fieldset>
+
+<!-- Plantillas -->
+<fieldset>
+  <legend id="label_preambulos" class="titulo-bloque"></legend>
+  <select id="plantillaSelect" aria-label="Seleccionar plantilla"></select>
+  <button id="cambiarPlantilla">Aplicar plantilla</button>
+</fieldset>
+
+<!-- Ir a sección -->
+<fieldset>
+  <legend id="label_ir_seccion" class="titulo-bloque"></legend>
+  <select id="menuEstructura" aria-label="Ir a una sección"></select>
+</fieldset>
+
+<!-- Cargar archivo -->
+<fieldset>
+  <legend id="label_cargar" class="titulo-bloque"></legend>
+  <button id="botonCargarArchivo">📄 Cargar .tex</button>
+  <input type="file" id="cargarArchivo" accept=".tex" style="display: none">
+</fieldset>
+
+<!-- Descargar -->
+<fieldset>
+  <legend id="label_descargar" class="titulo-bloque"></legend>
+  <a href="/pdf" download id="descargarPDF" style="display:none;">📥 PDF</a><br>
+  <a href="/documento.tex" download id="descargarTEX" style="display:none;">📄 .tex</a>
+</fieldset>
+
+<!-- Idioma -->
+<fieldset>
+  <legend id="label_idioma" class="titulo-bloque"></legend>
+  <select id="idiomaSelect" aria-label="Seleccionar idioma">
+    <option value="es">Español</option>
+    <option value="en">English</option>
+  </select>
+</fieldset>
+
+  </div>
+
+   <div class="fila-de-controles">
+  <!-- Área de errores -->
+  <fieldset style="margin-top: 1em; width: 80%;" > 
+   <label for="errores">Errores detectados:</label> 
+    <textarea id="errores" readonly style="width: 100%; height: 4em;"></textarea>
+  </fieldset>
+</div>
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/voz.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/plantillas.js"></script>
+  <script src="js/compilador.js"></script>
+  <script src="js/archivo.js"></script>
+  <script src="js/estructura.js"></script>
+
+  <script>
+  function aplicarTraduccionesVisibles() {
+  document.querySelector("h2").textContent = t("titulo_app");
+  document.getElementById("compilar").textContent = t("boton_compilar");
+  document.getElementById("compilar").ariaLabel = t("boton_compilar");
+  document.getElementById("cambiarPlantilla").textContent = t("aplicar_plantilla");
+  document.getElementById("botonCargarArchivo").textContent = t("cargar_archivo");
+  document.querySelector("label[for='errores']").textContent = t("errores_compilacion");
+  document.getElementById("descargarPDF").textContent = t("descargar_pdf");
+  document.getElementById("descargarTEX").textContent = t("descargar_tex");
+
+  // Títulos de fieldset
+  document.getElementById("label_compilacion").textContent = t("label_compilacion");
+  document.getElementById("label_preambulos").textContent = t("label_preambulos");
+  document.getElementById("label_ir_seccion").textContent = t("label_ir_seccion");
+  document.getElementById("label_cargar").textContent = t("label_cargar");
+  document.getElementById("label_descargar").textContent = t("label_descargar");
+  document.getElementById("label_idioma").textContent = t("label_idioma");
+ }
+
+    document.getElementById("idiomaSelect").addEventListener("change", e => {
+      idioma = e.target.value;
+      localStorage.setItem("idioma", idioma);
+      aplicarTraduccionesVisibles();
+      speak(t("seleccion_idioma"));
+    });
+
+    const savedLang = localStorage.getItem("idioma");
+    if (savedLang) {
+      idioma = savedLang;
+      document.getElementById("idiomaSelect").value = idioma;
+    }
+
+    aplicarTraduccionesVisibles();
+  </script>
+</body>
+</html>

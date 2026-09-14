@@ -1,0 +1,79 @@
+AccessTex - Editor LaTeX accesible
+Versión: 1.0
+Fecha de actualización: junio de 2026
+Autor: José Iván López Flores
+Licencia: GPLv3
+============================================================
+INSTRUCCIONES DE USO PARA PERSONAS CON DISCAPACIDAD VISUAL
+============================================================
+1. INTRODUCCIÓN
+---------------
+AccessTex es un editor y compilador LaTeX accesible. Su interfaz está diseñada para usarse completamente con el teclado y lectores de pantalla. Permite escribir documentos, compilar, detectar errores y navegar por secciones.
+2. NAVEGACIÓN GENERAL
+---------------------
+Todos los elementos están organizados en una sola fila horizontal.
+Para moverse entre botones y campos, use la tecla TAB o SHIFT + TAB.
+3. ATAJOS DE TECLADO
+--------------------
+Los siguientes atajos funcionan desde cualquier parte de AccessTex:
+- Ctrl + Enter      → Compilar el documento
+- Ctrl + Q          → Ir a la línea del error detectado por LaTeX
+- Ctrl + I          → Anunciar en qué línea está el cursor
+- Ctrl + Shift + I  → Abrir el menú de secciones y subsecciones (estructura)
+- Escape            → Salir del editor y volver al área de controles
+Nota: Dentro del editor, la tecla TAB está reservada por Monaco Editor para la edición del documento. Para salir del editor, presiona dos veces Escape.
+4. FUNCIONES DISPONIBLES
+------------------------
+- Compilar (Ctrl + Enter): genera el PDF y revisa errores.
+- Cambiar preámbulo: elige entre varios preámbulos como "article", "report", "book", o personalizados.
+- Navegar por estructura: elige secciones o subsecciones desde un menú desplegable.
+- Cargar archivo `.tex`: importa un archivo desde tu computadora.
+- Descargar PDF o TEX: aparecen cuando la compilación fue exitosa.
+- Cambiar idioma: disponible en español e inglés.
+5. MENSAJES DE VOZ
+------------------
+AccessTex utiliza mensajes breves de voz para informar el estado del sistema. La lectura detallada de controles, menús y mensajes es realizada por el lector de pantalla del usuario (NVDA, JAWS o equivalente).
+Algunos ejemplos de mensajes son:
+- "Compilación exitosa."
+- "Error en línea 27."
+- "Plantilla aplicada."
+- "Archivo cargado."
+- "Línea 27."
+6. ERRORES Y LECTURA DEL CONTEXTO
+---------------------------------
+Si se detecta un error al compilar:
+- AccessTex intentará localizar automáticamente la línea relacionada con el error.
+- La ubicación puede ser exacta o aproximada dependiendo del tipo de error detectado.
+- Puedes presionar Ctrl + Q para saltar directamente a la línea identificada.
+- El mensaje completo del error permanecerá disponible en el cuadro "Errores de compilación", donde podrá ser leído y explorado mediante el lector de pantalla.
+- En algunos casos, AccessTex utiliza información contextual del archivo para localizar el origen del problema cuando LaTeX no proporciona una línea precisa.
+7. RECOMENDACIONES DE USO
+-------------------------
+- Usa AccessTex a pantalla completa para mayor comodidad.
+- Si tienes varias secciones, navega por ellas con el menú (Ctrl + Shift + I).
+- Usa auriculares para escuchar los mensajes de voz con mayor claridad.
+- Evite dejar líneas en blanco, en pruebas previas se detectó que así los errores se detectan mejor.
+- Utiliza preferentemente un lector de pantalla compatible como NVDA o JAWS.
+- AccessTex emplea mensajes breves de voz; la información detallada es proporcionada por el lector de pantalla.
+8. SOPORTE Y AUTORÍA
+--------------------
+Desarrollado por: José Iván López Flores  
+Correo: jlopez@uaz.edu.mx 
+Licencia: GNU GPL v3 (software libre)
+Para contribuir o reportar mejoras, contacta directamente al autor.
+9. INSTALACIÓN EN WINDOWS
+--------------------------
+AccessTex se puede instalar fácilmente mediante un archivo ejecutable (AccessTex Setup.exe) que contiene todo lo necesario para su uso.
+Pasos:
+1. Descarga el archivo `AccessTex Setup.exe` desde la página oficial o medio de instalación.
+2. Haz doble clic sobre el archivo para iniciar la instalación.
+3. El asistente de instalación te permitirá crear accesos directos en el Escritorio y el Menú Inicio.
+4. Una vez instalado, puedes abrir AccessTex como cualquier otro programa.
+5. Al ejecutarse por primera vez, AccessTex crea automáticamente una carpeta llamada "AccessTex" dentro del directorio personal del usuario. Esta carpeta almacena archivos temporales de compilación, registros de actividad necesarios para el funcionamiento de la aplicación y este mismo archivo de instrucciones.
+Importante:
+AccessTex requiere tener instalado un sistema LaTeX que incluya pdflatex.
+Se recomienda instalar TeX Live (https://www.tug.org/texlive/) en su versión completa antes del primer uso.
+Si LaTeX no está instalado, AccessTex mostrará un mensaje de advertencia al iniciar.
+============================================================
+FIN DE LAS INSTRUCCIONES
+============================================================

@@ -1,0 +1,38 @@
+[article] {
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\title{Título}
+\author{Autor}
+\date{}
+}
+
+[report] {
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\title{Título}
+\author{Autor}
+\date{}
+}
+
+[book] {
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\title{Título}
+\author{Autor}
+\date{}
+}
+
+[miPlantilla] {
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{hyperref}
+\title{Mi Plantilla Personal}
+\author{Yo}
+\date{\today}
+}

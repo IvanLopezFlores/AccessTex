@@ -1,0 +1,24 @@
+# Dependencias de Node
+node_modules/
+
+# Instaladores y builds
+dist/
+
+# Archivos generados por AccessTex
+compilación/
+accesslog_AccessTex.txt
+
+# Archivos temporales de LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Variables/configuración local
+.env
+.env.*
+
+# Archivos del sistema
+Thumbs.db
+.DS_Store
