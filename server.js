@@ -219,9 +219,11 @@ app.post("/guardar", (req, res) => {
 
 // ─── Iniciar servidor ────────────────────────────────────────
 const PORT = 3000;
-app.listen(PORT, () => {
-  if (process.env.NODE_ENV === 'development') {
-    console.log(`Servidor en http://localhost:${PORT}`);
+const HOST = "127.0.0.1";
+
+app.listen(PORT, HOST, () => {
+  if (process.env.NODE_ENV === "development") {
+    console.log(`Servidor en http://${HOST}:${PORT}`);
   }
-  log(`Express escuchando puerto ${PORT}`);
+  log(`Express escuchando en ${HOST}:${PORT}`);
 });
