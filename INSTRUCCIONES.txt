@@ -1,4 +1,4 @@
-cessTex - Editor LaTeX accesible
+AcessTex - Editor LaTeX accesible
 Versión: 1.0
 Fecha de actualización: septiembre de 2026
 
